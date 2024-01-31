@@ -2,10 +2,10 @@ fun main() {
     try {
         //Instanciamos la hora con los datos recibidos
 
-        var hora = pedirHora()
-        var minutos = pedirMinutos()
-        var segundos = pedirSegundos()
-
+        var hora = Tiempo.pedirHora()
+        var minutos = Tiempo.pedirMinutos()
+        var segundos = Tiempo.pedirSegundos()
+/*
         while (hora > 23 || minutos >= 59 || segundos >= 59) {
             if (segundos >= 59) {
                 segundos -= 59
@@ -21,6 +21,8 @@ fun main() {
                 hora -= 23
             }
         }
+
+ */
         //Creamos una instancia con los datos recibidos del usuario:
         val horaActual = Tiempo(hora, minutos, segundos)
         println(horaActual)

@@ -2,7 +2,7 @@ fun pedirMinutos(): Int {
     try {
         println("Introduce los minutos: ")
         var minutosIntro = readln()
-        while (minutosIntro.toInt() !in 1..60 || minutosIntro == null) {
+        while (minutosIntro.toInt() !in 1..59 || minutosIntro == null) {
             println("ERROR. Inténtalo de nuevo: ")
             minutosIntro = readln()
         }

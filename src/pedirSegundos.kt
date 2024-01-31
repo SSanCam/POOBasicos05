@@ -3,7 +3,7 @@ fun pedirSegundos(): Int {
     try {
         println("Introduce los segundos: ")
         var segundosIntro = readln()
-        while (segundosIntro.toInt() !in 1..60 || segundosIntro == null) {
+        while (segundosIntro.toInt() !in 1..59 || segundosIntro == null) {
             println("ERROR. Inténtalo de nuevo: ")
             segundosIntro = readln()
         }
