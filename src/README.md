@@ -16,7 +16,7 @@ superior por el resultado del modulo de 60, quedándose en segundos o minutos co
 a : 1 minuto y 5 segundos.
 
 Hora siempre tendrá que ser menor que 24, si no, lanzará una excepción.
-
+>>>
 Añadir un nuevo método incrementar(t:Tiempo):Boolean, que incrementa en t, el total del tiempo que almacena el objeto
 que recibe el mensaje, devolviendo false si al incrementar se superan las 23:59:59, en cuyo caso no cambiaría nada del
 objeto que recibe el mensaje. En el programa principal, debe solicitar por teclado hora, minuto y segundo del objeto t.
