@@ -4,7 +4,7 @@ fun main() {
     fun pedirHora(): Int {
         println("Introduce la hora: ")
         var horaIntro = readln()
-        while (horaIntro.toInt() !in 1..24) {
+        while (horaIntro.toInt() !in 1..24 || horaIntro == null) {
             println("ERROR. Inténtalo de nuevo: ")
             horaIntro = readln()
         }
@@ -15,7 +15,7 @@ fun main() {
     fun pedirMinutos(): Int {
         println("Introduce los minutos: ")
         var minutosIntro = readln()
-        while (minutosIntro.toInt() !in 1..60) {
+        while (minutosIntro.toInt() !in 1..60 || minutosIntro == null) {
             println("ERROR. Inténtalo de nuevo: ")
             minutosIntro = readln()
         }
@@ -26,7 +26,7 @@ fun main() {
     fun pedirSegundos(): Int {
         println("Introduce los segundos: ")
         var segundosIntro = readln()
-        while (segundosIntro.toInt() !in 1..60) {
+        while (segundosIntro.toInt() !in 1..60 || segundosIntro == null) {
             println("ERROR. Inténtalo de nuevo: ")
             segundosIntro = readln()
         }
@@ -38,19 +38,19 @@ fun main() {
     var minutos = pedirMinutos()
     var segundos = pedirSegundos()
 
-    while (hora > 23 || minutos > 58 || segundos > 58){
-        if (segundos > 58) {
+    while (hora > 23 || minutos >= 59 || segundos >= 59){
+        if (segundos >= 59) {
             segundos -= 59
             minutos += 1
 
         }
-        if (minutos > 58) {
+        if (minutos >= 59) {
             minutos -= 59
             hora += 1
         }
 
         if (hora > 23) {
-            hora -= 24
+            hora -= 23
         }
     }
     val horaActual = Tiempo(hora, minutos, segundos)
