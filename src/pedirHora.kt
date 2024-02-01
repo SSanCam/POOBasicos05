@@ -1,0 +1,13 @@
+fun pedirHora(): Int {
+    try {
+        println("Introduce la hora: ")
+        var horaIntro = readln()
+        while (horaIntro.toInt() !in 1..23) {
+            println("ERROR. Inténtalo de nuevo: ")
+            horaIntro = readln()
+        }
+        return horaIntro.toInt()
+    } catch (e: NumberFormatException) {
+        return 0
+    }
+}
