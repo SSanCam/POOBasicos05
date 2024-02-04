@@ -4,8 +4,6 @@ fun main() {
         var hora = pedirHora()
         var minutos = pedirMinutos()
         var segundos = pedirSegundos()
-        //Creamos la instancia con los datos dados.
-        val horaActual = Tiempo(hora, minutos, segundos)
 
         //Comprobamos los valores de hh:mm:ss según las especificaciones del problema.
         while (hora > 23 || minutos >= 59 || segundos >= 59) {
@@ -22,11 +20,11 @@ fun main() {
                 hora += minutos.div(60)
             }
         }
-
+        //Creamos la instancia con los datos dados.
+        val horaActual = Tiempo(hora, minutos, segundos)
         println(horaActual)
 
     } catch (e: IllegalArgumentException) {
         println(e.message)
     }
-
 }
